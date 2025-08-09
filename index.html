@@ -1,36 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Varanasi Metro Corporation</title>
-    <link rel="icon" href="C:\Users\ASUS\OneDrive\Desktop\Code\Route\trainlogo.png" style="background-color: black;">
-    <link rel="stylesheet" href="style.css"/>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Varanasi SVG Metro Map (Interactive)</title>
+<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <div class="header">
-        <img src="./trainlogo.png" alt="Train Logo">
-        <h2>Varanasi Metro Corporation</h2>
-    </div>
-    <div class="container">
-        <div class="plan-journey">
-            <h3>Plan Your Journey</h3>
-            <label for="from">From</label>
-            <select id="from"></select>
-            <label for="to">To</label>
-            <select id="to"></select>
-            <button id="getpath">Get Your Path</button>
-            <div class="result">
-                <p id="path"></p>
-                <p id="msg"></p>
-            </div>
-        </div>
-        <div class="map">
-            <img src="./Lanka (3).png" alt="Varanasi Metro Map">
-        </div>
-        
-    </div>
+<div class="app">
+  <div class="panel">
+    <h2> Plan Your Journey</h2>
 
-    <script src="logic.js"></script>
+    <label for="fromInput">From</label>
+    <input type="text" id="fromInput" autocomplete="off" placeholder="Search station..." />
+    <div id="fromDropdown" class="autocomplete-dropdown"></div>
+    <label for="toInput">To</label>
+    <input type="text" id="toInput" autocomplete="off" placeholder="Search station..." />
+    <div id="toDropdown" class="autocomplete-dropdown"></div>
+
+
+    <button id="getpath">Get Path</button>
+
+    <p id="msg" style="font-style:italic; opacity:.9; font-size:13px;"></p>
+
+    
+  </div>
+
+  <div class="svg-wrap">
+    <svg id="svgMap" viewBox="0 0 849 1080" xmlns="http://www.w3.org/2000/svg" aria-label="Varanasi metro schematic">
+        <g id="routeLayer"></g>
+        <g id="stationsLayer"></g>
+      <g id="edgesLayer"></g>
+      
+      
+    </svg>
+  </div>
+</div>
+
+<script src="logic.js">
+
+</script>
 </body>
 </html>
