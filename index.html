@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varanasi Metro Corporation</title>
+    <link rel="icon" href="C:\Users\ASUS\OneDrive\Desktop\Code\Route\trainlogo.png" style="background-color: black;">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="header">
+        <img src="./trainlogo.png" alt="Train Logo">
+        <h2>Varanasi Metro Corporation</h2>
+    </div>
+    <div class="container">
+        <div class="plan-journey">
+            <h3>Plan Your Journey</h3>
+            <label for="from">From</label>
+            <select id="from"></select>
+            <label for="to">To</label>
+            <select id="to"></select>
+            <button id="getpath">Get Your Path</button>
+            <div class="result">
+                <p id="path"></p>
+                <p id="msg"></p>
+            </div>
+        </div>
+        <div class="map">
+            <img src="./Lanka (3).png" alt="Varanasi Metro Map">
+        </div>
+        
+    </div>
+
+    <script src="logic.js"></script>
+</body>
+</html>
