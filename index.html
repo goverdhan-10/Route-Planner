@@ -1,3 +1,61 @@
+<<<<<<< HEAD
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Interactive Varanasi Metro Map with journey planner">
+  <title>Varanasi Metro Map | Interactive Journey Planner</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="app">
+    <!-- Control Panel -->
+    <div class="panel">
+      <h2>Plan Your Journey</h2>
+      
+      <div class="input-group">
+        <label for="fromInput">From Station</label>
+        <input type="text" id="fromInput" autocomplete="off" placeholder="Search station..." 
+               aria-label="Select starting station" />
+        <div id="fromDropdown" class="autocomplete-dropdown" role="listbox" aria-expanded="false"></div>
+      </div>
+      
+      <div class="input-group">
+        <label for="toInput">To Station</label>
+        <input type="text" id="toInput" autocomplete="off" placeholder="Search station..." 
+               aria-label="Select destination station" />
+        <div id="toDropdown" class="autocomplete-dropdown" role="listbox" aria-expanded="false"></div>
+      </div>
+
+      <button id="getpath" aria-label="Calculate route">
+        
+        Get Path
+      </button>
+
+      <!-- Path Breakdown Container -->
+      <div id="pathBreakdown" class="path-breakdown" aria-live="polite"></div>
+      
+      <!-- Status Messages -->
+      <div id="msg" role="status"></div>
+    </div>
+
+    <!-- Map Container -->
+    <div class="svg-wrap">
+      <svg id="svgMap" viewBox="0 0 849 1080" xmlns="http://www.w3.org/2000/svg" aria-label="Varanasi metro map">
+        <!-- Layer order ensures proper visual stacking -->
+        <g id="edgesLayer" aria-hidden="true"></g>          <!-- Base network connections -->
+        <g id="permanentRoutesLayer" aria-hidden="true"></g> <!-- Colored route lines -->
+        <g id="stationsLayer"></g>                          <!-- Station dots and labels -->
+        <g id="routeLayer"></g>                             <!-- Highlighted path -->
+      </svg>
+    </div>
+  </div>
+
+  <script src="logic.js" defer></script>
+</body>
+</html>
+=======
 <!doctype html>
 <html lang="en">
 <head>
@@ -42,3 +100,4 @@
 </script>
 </body>
 </html>
+>>>>>>> edcfdacf33b27526ea3301c77a5dddbcb524767e
